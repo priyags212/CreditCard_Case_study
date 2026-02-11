@@ -18,6 +18,12 @@ The analysis is based on the **Home Credit Default Risk dataset**.
 | Applicants Data | 307,511 rows × 122 columns | Customer demographic & financial details |
 | Previous Loans Data | 1,670,214 rows (cleaned to 69,635) | Historical loan behavior |
 
+## 📥 Dataset Source
+The dataset used in this project is the **Home Credit Default Risk dataset** available on Kaggle.
+Due to large file size, the dataset is not included in this repository.
+You can download it from:
+https://www.kaggle.com/competitions/home-credit-default-risk/data
+
 ### Data Includes:
 - Demographics (Age, Gender, Education)
 - Income & Employment Details
