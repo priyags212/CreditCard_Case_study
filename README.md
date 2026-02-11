@@ -1,69 +1,93 @@
 # 📊 Credit Risk Analysis – Banking Case Study
 
-## 📌 Project Overview
-This project focuses on analyzing banking customer and loan data to identify patterns that influence loan default risk. Using data analytics and statistical techniques, the project uncovers high-risk and low-risk customer segments and provides actionable insights to support data-driven lending decisions.
-
-The analysis is based on the **Home Credit Default Risk dataset** and involves data cleaning, exploratory data analysis (EDA), feature engineering, hypothesis testing, and business recommendations.
+## 🏦 Project Overview
+This project analyzes large-scale banking customer and loan data to identify patterns influencing loan default risk.
+Using **Exploratory Data Analysis (EDA)** and **Statistical Hypothesis Testing**, the project uncovers high-risk and low-risk customer segments and provides actionable business recommendations to support data-driven lending decisions.
+The analysis is based on the **Home Credit Default Risk dataset**.
 
 ## 🎯 Objectives
-- Identify key factors associated with loan default
-- Understand customer behavior and risk patterns
-- Perform statistical hypothesis testing
-- Provide recommendations for improving credit risk assessment
+- Identify key factors associated with loan default  
+- Understand demographic and financial risk patterns  
+- Perform statistical hypothesis testing  
+- Segment customers into high-risk and low-risk groups  
+- Provide business recommendations to improve credit risk assessment  
 
 ## 🗂 Dataset Information
-- **Applicants Dataset:** 307,511 rows, 122 columns  
-- **Previous Loans Dataset:** 1,670,214 rows (cleaned to 69,635 rows)
+| Dataset | Records | Description |
+|----------|----------|-------------|
+| Applicants Data | 307,511 rows × 122 columns | Customer demographic & financial details |
+| Previous Loans Data | 1,670,214 rows (cleaned to 69,635) | Historical loan behavior |
 
-Data includes:
-- Demographics  
-- Income & employment details  
-- Credit & annuity values  
-- Loan purpose & contract status  
+### Data Includes:
+- Demographics (Age, Gender, Education)
+- Income & Employment Details
+- Credit Amount & Annuity
+- Loan Purpose
+- Contract Status
+- Housing Type
 
 ## ⚙️ Data Preprocessing
 - Removed columns with more than 40% missing values  
 - Imputed numerical missing values using median  
 - Filled categorical missing values using mode  
-- Handled invalid values such as `XNA` and `XAP`  
+- Handled invalid categories (`XNA`, `XAP`)  
 - Merged applicant and previous loan datasets  
+- Converted negative day values into meaningful age and employment years  
 
 ## 🔧 Feature Engineering
-- Age in years from DAYS_BIRTH  
-- Employment years from DAYS_EMPLOYED  
-- Binning income and credit into ranges  
-- Target variable:
-  - `0` → Non-defaulter  
-  - `1` → Defaulter  
+- Created **Age in Years** from `DAYS_BIRTH`
+- Created **Employment Years** from `DAYS_EMPLOYED`
+- Binned income and credit into meaningful ranges
+- Defined target variable:
+  - `0 → Non-Defaulter`
+  - `1 → Defaulter`
 
 ## 📊 Exploratory Data Analysis (EDA)
-- Univariate, bivariate, and multivariate analysis  
-- Box plots and distributions for income, credit, and annuity  
-- Relationship between education, income, gender, housing type, and default  
+
+Performed:
+- Univariate Analysis  
+- Bivariate Analysis  
+- Multivariate Analysis
+  
+Analyzed relationships between:
+- Income vs Default Rate  
+- Education vs Default Probability  
+- Gender vs Default  
+- Housing Type vs Risk  
+- Loan Purpose vs Default  
+
+Visualizations include:
+- Distribution plots  
+- Box plots  
+- Count plots  
+- Correlation analysis  
 
 ## 📈 Hypothesis Testing
-- Defaulters have lower income than non-defaulters  
-- Default rate differs by gender  
-- Education level impacts default probability  
-- Overall company default rate is greater than 10%  
+Statistical testing was conducted to validate key assumptions:
+1. Defaulters have significantly lower income than non-defaulters  
+2. Default rate differs by gender  
+3. Education level impacts default probability  
+4. Overall company default rate exceeds 10%  
 
 ## 🔍 Key Insights
-**High-Risk Groups**
-- Low income applicants  
+### 🚨 High-Risk Segments
+- Low-income applicants  
 - Working income type  
 - Loan purpose: Repairs  
 - Housing type: Co-op apartments  
 
-**Low-Risk Groups**
-- Students, Pensioners, Businessmen  
-- Loan purpose: Education, Business Development  
-- Housing: With parents, House/Apartment  
+### ✅ Low-Risk Segments
+- Students  
+- Pensioners  
+- Businessmen  
+- Loan purpose: Education & Business Development  
+- Housing: With parents / House / Apartment  
 
-## ✅ Business Recommendations
+## 📌 Business Recommendations
 - Strengthen screening for low-income and working applicants  
-- Avoid risky loan purposes such as repairs  
-- Use previous loan behavior as a key risk indicator  
-- Build predictive models using income, credit range, occupation, and education  
+- Apply stricter validation for repair-related loans  
+- Use previous loan behavior as a strong risk indicator  
+- Incorporate income range and occupation into risk scoring models  
 
 ## 🛠 Technologies Used
 - Python  
@@ -72,16 +96,53 @@ Data includes:
 - Matplotlib  
 - Seaborn  
 - SciPy  
+- Statsmodels  
+- Scikit-learn  
 - Jupyter Notebook  
-- SQLite  
+
+## 📦 Requirements
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+statsmodels
+scikit-learn
+jupyter
 
 ## ▶️ How to Run the Project
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/priyags212/Credit-Risk-Analysis-Banking-Case-Study.git
-2. Open the notebook in Jupyter Notebook
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/priyags212/CreditCard_Case_study.git
+```
+### 2️⃣ Navigate to project folder
+```bash
+cd CreditCard_Case_study
+```
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4️⃣ Open Jupyter Notebook
+```bash
+jupyter notebook
+```
+Open `Credit_Case_study.ipynb` and run all cells sequentially.
+---
 
-3. Run cells sequentially
-   
-📌 Conclusion
-This project demonstrates how data analytics and statistics can be used to evaluate credit risk and support smarter lending decisions. The findings help banks reduce default rates and improve portfolio quality.
+## 🚀 Future Scope
+- Build predictive models (Logistic Regression, Random Forest)  
+- Create credit risk scoring model  
+- Develop interactive dashboard (Power BI / Streamlit)  
+- Deploy as end-to-end ML pipeline  
+
+---
+## 📌 Conclusion
+This project demonstrates how data analytics and statistical techniques can be applied to evaluate credit risk effectively.
+The insights support data-driven lending decisions by helping financial institutions:
+- Identify high-risk customer segments  
+- Improve credit assessment strategies  
+- Reduce default exposure  
+- Enhance portfolio performance
+  
+⭐ If you found this project valuable, feel free to connect and collaborate!
